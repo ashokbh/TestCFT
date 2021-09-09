@@ -1,13 +1,11 @@
 {
-    "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
         "S3Bucket": {
-            "Type": "AWS::S3::Bucket"
-        }
-    },
-    "Outputs": {
-        "BucketName": "ash-s3-new-bucket",
-            "Description": "Name of the sample Amazon S3 bucket."
+            "Type": "AWS::S3::Bucket",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+                "BucketName": "ash-s3-sample-bucket"
+            }
         }
     }
 }
